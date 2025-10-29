@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ImFitPlus</string>
     <string name="apresentacatacao_tv">Descubra seu perfil de saúde e receba recomendações personalizadas.</string>
+    <string name="apresentacao_bt">Comece aqui</string>
 </resources>

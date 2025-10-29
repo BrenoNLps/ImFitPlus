@@ -16,5 +16,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/apresentacao_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/apresentacao_bt"
+        app:layout_constraintTop_toBottomOf="@+id/apresentacao_tv"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
