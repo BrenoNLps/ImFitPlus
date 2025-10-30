@@ -13,5 +13,10 @@
     <string name="feminino">feminino</string>
     <string name="masculino">masculino</string>
 
-
+    <string-array name="atividade">
+        <item>Sedentário</item>
+        <item>leve</item>
+        <item>Moderado</item>
+        <item>Intenso</item>
+    </string-array>
 </resources>

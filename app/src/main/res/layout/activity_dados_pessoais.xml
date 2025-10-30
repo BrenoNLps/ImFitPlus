@@ -69,5 +69,18 @@
             />
     </RadioGroup>
 
+    <TextView
+        android:id="@+id/nivel_atividade_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nivel_de_atividade"
+        />
+
+    <Spinner
+        android:id="@+id/nivel_atividade_sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/atividade"
+        />
 
 </LinearLayout>
