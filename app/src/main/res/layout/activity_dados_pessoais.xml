@@ -30,7 +30,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/digite_sua_idade"
-        android:inputType="number"
         />
 
     <EditText
@@ -38,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/idade"
+        android:inputType="number"
         />
 
     <TextView
