@@ -12,6 +12,8 @@
     <string name="idade">idade</string>
     <string name="feminino">feminino</string>
     <string name="masculino">masculino</string>
+    <string name="coloque_sua_altura">Coloque sua altura :</string>
+    <string name="altura">Ex: 1.70</string>
 
     <string-array name="atividade">
         <item>Sedentário</item>

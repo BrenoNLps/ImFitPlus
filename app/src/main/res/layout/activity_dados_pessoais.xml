@@ -69,6 +69,25 @@
             />
     </RadioGroup>
 
+
+    <TextView
+        android:id="@+id/altura_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/coloque_sua_altura"
+        />
+    <EditText
+        android:id="@+id/altura_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/altura"
+        android:inputType="numberDecimal" />
+
+
+
+
+
+
     <TextView
         android:id="@+id/nivel_atividade_tv"
         android:layout_width="match_parent"
