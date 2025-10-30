@@ -83,9 +83,19 @@
         android:hint="@string/altura"
         android:inputType="numberDecimal" />
 
+    <TextView
+        android:id="@+id/peso_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/coloque_seu_peso"
+        />
 
-
-
+    <EditText
+        android:id="@+id/peso_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/peso"
+        android:inputType="numberDecimal" />
 
 
     <TextView
