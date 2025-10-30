@@ -40,4 +40,34 @@
         android:hint="@string/idade"
         />
 
+    <TextView
+        android:id="@+id/sexo_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/selecione_seu_sexo"
+        />
+
+    <RadioGroup
+        android:id="@+id/sexo_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/masculino_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/masculino"
+            android:layout_weight="1"
+            />
+
+        <RadioButton
+            android:id="@+id/feminino_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/feminino"
+            />
+    </RadioGroup>
+
+
 </LinearLayout>
