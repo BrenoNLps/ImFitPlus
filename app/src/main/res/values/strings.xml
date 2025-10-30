@@ -1,21 +1,21 @@
 <resources>
     <string name="app_name">ImFitPlus</string>
-    <string name="apresentacatacao_tv">Descubra seu perfil de saúde e receba recomendações personalizadas.</string>
+    <string name="apresentacao_tv">Descubra seu perfil de saúde e receba recomendações personalizadas.</string>
 
     <string name="apresentacao_bt">Comece aqui</string>
     <string name="digite_seu_nome">Digite seu nome :</string>
     <string name="digite_sua_idade">Digite sua idade :</string>
     <string name="selecione_seu_sexo">Selecione seu sexo :</string>
     <string name="nivel_de_atividade">Nível de atividade :</string>
+    <string name="coloque_sua_altura">Coloque sua altura :</string>
+    <string name="coloque_seu_peso">Coloque seu peso :</string>
 
     <string name="nome">nome</string>
     <string name="idade">idade</string>
     <string name="feminino">feminino</string>
     <string name="masculino">masculino</string>
-    <string name="coloque_sua_altura">Coloque sua altura :</string>
     <string name="altura">Ex: 1.70</string>
     <string name="peso">Ex: 60.00</string>
-    <string name="coloque_seu_peso">Coloque seu peso :</string>
 
     <string-array name="atividade">
         <item>Sedentário</item>
