@@ -1,5 +1,6 @@
 package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,32 @@ class GastoCalorico : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityGastoCaloricoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val nome   = intent.getStringExtra("nome")
+        val sexo   = intent.getStringExtra("sexo")
+        val idade  = intent.getIntExtra   ("idade" , 0  )
+        val peso   = intent.getDoubleExtra("peso"  , 0.0)
+        val altura = intent.getDoubleExtra("altura", 0.0)
+
+        val tmb = when (sexo?.lowercase()) {
+            "masculino" -> 66  + (13.7 * peso) + (5 * altura * 100  ) - (6.8 * idade)
+            "feminino"  -> 655 + (9.6 * peso ) + (1.8 * altura * 100) - (4.7 * idade)
+            else -> 0.0
+        }
+
+        val tmbFormatado = String.format("%.2f", tmb)
+
+        binding.resultadoTv.text = "$nome, \n  Sua Taxa Metabólica Basal é de $tmbFormatado kcal."
+
+        binding.proximoBt.setOnClickListener {
+            val pesoIdeal = Intent(this, PesoIdeal::class.java)
+            pesoIdeal.putExtra("nome", nome)
+            pesoIdeal.putExtra("peso", peso)
+            pesoIdeal.putExtra("altura", altura)
+            startActivity(pesoIdeal)
+        }
+
+        binding.voltarBt.setOnClickListener { finish() }
 
 
 
