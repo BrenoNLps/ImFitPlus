@@ -41,15 +41,15 @@ class DadosPessoais : AppCompatActivity() {
             val atividade = binding.nivelAtividadeSp.selectedItem.toString()
             val imc = peso/ (altura*altura)
 
-            val resultado = Intent(this, ResultadoIMC::class.java)
-            intent.putExtra("nome"     ,nome)
-            intent.putExtra("imc"      ,imc)
-            intent.putExtra("sexo"     ,sexo)
-            intent.putExtra("idade"    ,idade)
-            intent.putExtra("peso"     ,peso)
-            intent.putExtra("altura"   ,altura)
-            intent.putExtra("atividade",atividade)
-            startActivity(resultado)
+            val resultadoIMC = Intent(this, ResultadoIMC::class.java)
+            resultadoIMC.putExtra("nome"     ,nome)
+            resultadoIMC.putExtra("imc"      ,imc)
+            resultadoIMC.putExtra("sexo"     ,sexo)
+            resultadoIMC.putExtra("idade"    ,idade)
+            resultadoIMC.putExtra("peso"     ,peso)
+            resultadoIMC.putExtra("altura"   ,altura)
+            resultadoIMC.putExtra("atividade",atividade)
+            startActivity(resultadoIMC)
         }
 
     }
