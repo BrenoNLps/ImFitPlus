@@ -7,13 +7,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DadosPessoais"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center">
 
     <TextView
         android:id="@+id/nome_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/digite_seu_nome"
+        android:textSize="20sp"
         />
 
     <EditText
@@ -22,6 +24,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/nome"
         android:inputType="text"
+        android:textSize="20sp"
         />
 
 
@@ -30,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/digite_sua_idade"
+        android:textSize="20sp"
         />
 
     <EditText
@@ -38,6 +42,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/idade"
         android:inputType="number"
+        android:textSize="20sp"
         />
 
     <TextView
@@ -45,6 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/selecione_seu_sexo"
+        android:textSize="20sp"
         />
 
     <RadioGroup
@@ -58,6 +64,7 @@
             android:layout_height="wrap_content"
             android:text="@string/masculino"
             android:layout_weight="1"
+            android:textSize="20sp"
             />
 
         <RadioButton
@@ -66,6 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/feminino"
+            android:textSize="20sp"
             />
     </RadioGroup>
 
@@ -75,19 +83,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/coloque_sua_altura"
+        android:textSize="20sp"
         />
     <EditText
         android:id="@+id/altura_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/altura"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/peso_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/coloque_seu_peso"
+        android:textSize="20sp"
         />
 
     <EditText
@@ -95,7 +106,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/peso"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:textSize="20sp"/>
 
 
     <TextView
@@ -103,13 +115,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/nivel_de_atividade"
+        android:textSize="20sp"
         />
 
     <Spinner
         android:id="@+id/nivel_atividade_sp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/atividade"
+        android:textSize="20sp"
         />
 
     <Button
@@ -117,5 +131,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Enviar"
+        android:layout_marginTop="30sp"
+        android:textSize="30sp"
         />
 </LinearLayout>

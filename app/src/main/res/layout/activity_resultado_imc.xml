@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".ResultadoIMC">
 
     <TextView
@@ -13,6 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nome :"
+
+        android:textSize="20sp"
         />
 
     <TextView
@@ -20,6 +23,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="IMC :"
+
+        android:textSize="20sp"
         />
 
     <TextView
@@ -27,6 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Categoria :"
+
+        android:textSize="20sp"
         />
 
     <Button
@@ -34,6 +41,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Calcular gasto calórico :"
+        android:textSize="30sp"
+        android:layout_marginTop="20sp"
         />
 
     <Button
@@ -41,6 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Voltar"
+        android:textSize="30sp"
         />
 
 </LinearLayout>

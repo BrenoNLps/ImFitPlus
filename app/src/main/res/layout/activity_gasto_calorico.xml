@@ -6,24 +6,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".GastoCalorico">
 
     <TextView
         android:id="@+id/resultado_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Resultado" />
+        android:text="Resultado"
+        android:textSize="20sp"
+        />
 
     <Button
         android:id="@+id/proximo_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ver Peso Ideal" />
+        android:text="Ver Peso Ideal"
+        android:textSize="30sp"
+        android:layout_marginTop="20sp"/>
 
     <Button
         android:id="@+id/voltar_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Voltar" />
+        android:text="Voltar"
+        android:textSize="30sp"/>
 
 </LinearLayout>
