@@ -10,6 +10,7 @@ import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityGastoCal
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityMainBinding
 
 class GastoCalorico : AppCompatActivity() {
+    //tela4
     private lateinit var binding: ActivityGastoCaloricoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +39,7 @@ class GastoCalorico : AppCompatActivity() {
             pesoIdeal.putExtra("nome", nome)
             pesoIdeal.putExtra("peso", peso)
             pesoIdeal.putExtra("altura", altura)
+            pesoIdeal.putExtra("gastoCalorico", tmbFormatado)
             startActivity(pesoIdeal)
         }
 

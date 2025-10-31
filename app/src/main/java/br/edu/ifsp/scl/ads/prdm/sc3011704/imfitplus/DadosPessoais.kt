@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityDadosPessoaisBinding
 
 class DadosPessoais : AppCompatActivity() {
+    //tela 2
     private lateinit var binding: ActivityDadosPessoaisBinding
 
 

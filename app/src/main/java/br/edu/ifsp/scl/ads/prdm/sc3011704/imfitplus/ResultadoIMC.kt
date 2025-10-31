@@ -10,6 +10,7 @@ import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityDadosPes
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityResultadoImcBinding
 
 class ResultadoIMC : AppCompatActivity() {
+    //tela3
     private lateinit var binding: ActivityResultadoImcBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +40,8 @@ class ResultadoIMC : AppCompatActivity() {
         binding.calcularBt.setOnClickListener {
             val GastoCalorico = Intent(this, GastoCalorico::class.java)
 
+            GastoCalorico.putExtra("imc"     , imc)
+            GastoCalorico.putExtra("categoria"     , categoria)
             GastoCalorico.putExtra("nome"     , nome)
             GastoCalorico.putExtra("sexo"     , sexo)
             GastoCalorico.putExtra("idade"    , idade)

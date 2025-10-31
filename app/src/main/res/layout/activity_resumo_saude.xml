@@ -5,32 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".ResumoSaude"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".PesoIdeal">
+    >
 
     <TextView
-        android:id="@+id/resultado_tv"
+        android:id="@+id/resultadoFinal_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Resultado"
-        android:textSize="24sp"
-        android:paddingBottom="2dp" />
+        android:text="Resultado final"
+        android:textSize="25sp"
+        />
 
     <Button
-        android:id="@+id/resumoSaude_bt"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="voltar"
         android:textSize="30sp"
-        android:text="ir para resultado saude:"
-        android:layout_marginTop="20sp"/>
-
-    <Button
-        android:id="@+id/voltar_bt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="Voltar"
-        android:layout_marginTop="20sp"/>
-
+        />
 </LinearLayout>

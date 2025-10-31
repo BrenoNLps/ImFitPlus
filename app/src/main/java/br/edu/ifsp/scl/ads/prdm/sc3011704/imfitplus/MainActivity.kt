@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    //tela 1
     private lateinit var binding: ActivityMainBinding
     
     override fun onCreate(savedInstanceState: Bundle?) {

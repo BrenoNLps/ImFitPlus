@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ImFitPlus"
         tools:targetApi="31">
         <activity
+            android:name=".ResumoSaude"
+            android:exported="false" />
+        <activity
             android:name=".PesoIdeal"
             android:exported="false" />
         <activity
