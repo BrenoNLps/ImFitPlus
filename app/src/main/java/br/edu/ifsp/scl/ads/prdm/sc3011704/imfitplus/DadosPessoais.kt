@@ -31,8 +31,8 @@ class DadosPessoais : AppCompatActivity() {
             }
 
             val idade  = idadeString.toInt()
-            val altura = alturaString.toDouble()
-            val peso   = pesoString.toDouble()
+            val altura = validarAltura(alturaString)
+            val peso   = validarPeso  (pesoString)
             val sexo = when (binding.sexoRg.checkedRadioButtonId){
                 R.id.masculino_rb -> "masculino"
                 R.id.feminino_rb  -> "feminino"
@@ -53,4 +53,25 @@ class DadosPessoais : AppCompatActivity() {
         }
 
     }
+
+    private fun validarAltura(texto: String): Double {
+        return try {
+            val valor = texto.toDouble()
+            if (texto.contains(".") || valor in 0.5..2.5) valor else valor / 100
+        } catch (e: NumberFormatException) {
+            0.0
+        }
+
+    }
+
+    private fun validarPeso(texto: String): Double {
+        return try {
+            val valor = texto.toDouble()
+            if (texto.contains(".") || valor in 30.0..300.0) valor else valor / 100
+        } catch (e: NumberFormatException) {
+            0.0
+        }
+
+    }
+
 }
