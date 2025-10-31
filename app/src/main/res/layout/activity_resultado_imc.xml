@@ -30,14 +30,14 @@
         />
 
     <Button
-        android:id="@+id/calcular_id"
+        android:id="@+id/calcular_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Calcular gasto calórico :"
         />
 
     <Button
-        android:id="@+id/voltar_id"
+        android:id="@+id/voltar_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Voltar"
