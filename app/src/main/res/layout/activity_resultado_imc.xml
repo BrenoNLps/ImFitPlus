@@ -29,6 +29,13 @@
         android:text="Categoria :"
         />
 
+    <Button
+        android:id="@+id/calcular_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular gasto calórico :"
+        />
+
 
 
 </LinearLayout>
