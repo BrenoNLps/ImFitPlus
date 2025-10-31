@@ -31,7 +31,7 @@ class GastoCalorico : AppCompatActivity() {
 
         val tmbFormatado = String.format("%.2f", tmb)
 
-        binding.resultadoTv.text = "$nome, \n  Sua Taxa Metabólica Basal é de $tmbFormatado kcal."
+        binding.resultadoTv.text = "$nome, \nSua Taxa Metabólica Basal é de $tmbFormatado kcal."
 
         binding.proximoBt.setOnClickListener {
             val pesoIdeal = Intent(this, PesoIdeal::class.java)

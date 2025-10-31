@@ -31,7 +31,7 @@ class PesoIdeal : AppCompatActivity() {
         }
 
         binding.resultadoTv.text =
-            " $nome,\n Seu peso atual é : ${String.format("%.2f", peso)} kg \n Seu peso ideal é : $pesoIdealFormatado kg$mensagem".trimIndent()
+            " $nome,\n Seu peso atual é : ${String.format("%.2f", peso)} kg \n Seu peso ideal é : $pesoIdealFormatado kg \n $mensagem".trimIndent()
 
         binding.voltarBt.setOnClickListener {
             finish()
