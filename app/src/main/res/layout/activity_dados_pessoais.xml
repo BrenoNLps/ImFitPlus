@@ -112,4 +112,10 @@
         android:entries="@array/atividade"
         />
 
+    <Button
+        android:id="@+id/enviar_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        />
 </LinearLayout>
