@@ -89,6 +89,10 @@ class DadosPessoais : AppCompatActivity() {
             startActivity(resultadoIMC)
         }
 
+        binding.voltarMenuBt.setOnClickListener {
+            finish()
+        }
+
     }
 
     private fun validarAltura(texto: String): Double? {
