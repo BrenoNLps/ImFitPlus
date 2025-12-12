@@ -1,5 +1,6 @@
 package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -49,6 +50,12 @@ Recomendação de água: %.2f L
 
 
         binding.voltarBt.setOnClickListener {
+            finish()
+        }
+
+        binding.voltarMenuBt.setOnClickListener {
+            val menu = Intent(this, MainActivity::class.java)
+            startActivity(menu)
             finish()
         }
     }

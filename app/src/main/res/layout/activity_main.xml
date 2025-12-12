@@ -24,4 +24,12 @@
         android:textSize="30sp"
         android:layout_marginTop="20sp"/>
 
+    <Button
+        android:id="@+id/historico_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ver_hist_rico"
+        android:textSize="30sp"
+        android:layout_marginTop="20sp"/>
+
 </LinearLayout>

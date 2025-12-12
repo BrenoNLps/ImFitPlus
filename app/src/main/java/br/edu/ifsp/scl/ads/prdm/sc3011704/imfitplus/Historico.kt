@@ -25,6 +25,8 @@ class Historico : AppCompatActivity() {
             binding.historicoRv.adapter = UsuarioAdapter(listaUsuarios)
         }
 
-
+        binding.voltarBt.setOnClickListener {
+            finish()
+        }
     }
 }

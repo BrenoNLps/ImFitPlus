@@ -21,5 +21,10 @@ class MainActivity : AppCompatActivity() {
             val dadosPessoais = Intent(this, DadosPessoais::class.java)
             startActivity(dadosPessoais)
         }
+
+        binding.historicoBt.setOnClickListener {
+            val historico = Intent(this, Historico::class.java)
+            startActivity(historico)
+        }
     }
 }

@@ -14,7 +14,7 @@
         android:id="@+id/resultadoFinal_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Resultado final"
+        android:text="@string/resultado_final"
         android:textSize="25sp"
         />
 
@@ -22,7 +22,15 @@
         android:id="@+id/voltar_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="voltar"
-        android:textSize="30sp"
-        />
+        android:text="@string/voltar"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/voltar_menu_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/voltar_para_o_menu"
+        android:layout_marginTop="10dp"
+        android:textSize="30sp" />
 </LinearLayout>

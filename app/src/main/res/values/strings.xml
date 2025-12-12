@@ -17,6 +17,9 @@
     <string name="altura">Ex: 1.70</string>
     <string name="peso">Ex: 60.00</string>
     <string name="ver_hist_rico">Ver histórico</string>
+    <string name="voltar">voltar</string>
+    <string name="resultado_final">Resultado final</string>
+    <string name="voltar_para_o_menu">Voltar para o menu</string>
 
     <string-array name="atividade">
         <item>Sedentário</item>

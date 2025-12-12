@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="12dp"
-    android:background="#EEEEEE">
+    android:background="#EEEEEE"
+    android:layout_marginTop="3dp">
 
     <!-- Dados pessoais -->
     <TextView
