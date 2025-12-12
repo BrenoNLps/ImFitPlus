@@ -5,8 +5,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.data.DatabaseBuilder
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.data.UsuarioEntity
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityResumoSaudeBinding
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.mapper.toEntity
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.UsuarioCompleto
+import kotlinx.coroutines.launch
 
 class ResumoSaude : AppCompatActivity() {
     //tela 6
@@ -16,7 +21,7 @@ class ResumoSaude : AppCompatActivity() {
         binding = ActivityResumoSaudeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val usuario = intent.getParcelableExtra<UsuarioCompleto>("usuario")!!
+        val usuario = intent.getParcelableExtra<UsuarioCompleto>("usuario") ?: return
 
         // Calculo de agua : 350ml por quilograma(peso corporal),resultado em litros
         val recomendacaoAgua = (usuario.peso* 350)/10000
@@ -36,6 +41,16 @@ Recomendação de água: %.2f L
             usuario.tmb,
             recomendacaoAgua
         )
+
+
+        //salva no banco de dados
+        val db = DatabaseBuilder.getInstance(this)
+        val usuarioEntity = usuario.toEntity()
+
+        lifecycleScope.launch {
+            db.usuarioDao().insert(usuarioEntity)
+        }
+
 
         binding.voltarBt.setOnClickListener {
             finish()
