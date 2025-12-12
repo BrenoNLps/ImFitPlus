@@ -18,22 +18,18 @@ class DadosPessoais : AppCompatActivity() {
 
 
         binding.enviarBt.setOnClickListener {
-            val nome         = binding.nomeEt.text.toString()
-            val idadeString  = binding.idadeEt.text.toString()
-            val alturaString = binding.alturaEt.text.toString()
-            val pesoString   = binding.pesoEt.text.toString()
-
-
-            if (nome.isBlank()   || idadeString.isBlank()  || alturaString.isBlank() || pesoString.isBlank()){
+            val nome   = binding.nomeEt.text.toString()
+            val idade  = binding.idadeEt.text.toString().toIntOrNull()
+            val altura = validarAltura(binding.alturaEt.text.toString())
+            val peso   = validarPeso(binding.pesoEt.text.toString())
+            if (nome.isBlank() || idade == null || altura == null || peso == null) {
                 Toast.makeText(
-                    this,"Preencha todos os campos!",
+                    this,
+                    "Preencha todos os campos corretamente!",
                     Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            val idade  = idadeString.toInt()
-            val altura = validarAltura(alturaString)
-            val peso   = validarPeso  (pesoString)
             val sexo = when (binding.sexoRg.checkedRadioButtonId){
                 R.id.masculino_rb -> "masculino"
                 R.id.feminino_rb  -> "feminino"
@@ -55,24 +51,24 @@ class DadosPessoais : AppCompatActivity() {
 
     }
 
-    private fun validarAltura(texto: String): Double {
+    private fun validarAltura(texto: String): Double? {
         return try {
             val valor = texto.toDouble()
             if (texto.contains(".") || valor in 0.5..2.5) valor else valor / 100
         } catch (e: NumberFormatException) {
-            0.0
+            null
         }
 
     }
-
-    private fun validarPeso(texto: String): Double {
+    private fun validarPeso(texto: String): Double? {
         return try {
             val valor = texto.toDouble()
             if (texto.contains(".") || valor in 30.0..300.0) valor else valor / 100
         } catch (e: NumberFormatException) {
-            0.0
+            null
         }
 
     }
+
 
 }
