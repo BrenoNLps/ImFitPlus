@@ -3,12 +3,14 @@ package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.R
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.data.UsuarioEntity
 
-class UsuarioAdapter(private val usuarios: List<UsuarioEntity>) :
+class UsuarioAdapter(private val usuarios: List<UsuarioEntity>, private val onItemClick: (UsuarioEntity) -> Unit) :
+
     RecyclerView.Adapter<UsuarioAdapter.UsuarioViewHolder>() {
 
     class UsuarioViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -22,6 +24,7 @@ class UsuarioAdapter(private val usuarios: List<UsuarioEntity>) :
         val categoriaTv: TextView = itemView.findViewById(R.id.categoriaTv)
         val tmbTv: TextView = itemView.findViewById(R.id.tmbTv)
         val pesoIdealTv: TextView = itemView.findViewById(R.id.pesoIdealTv)
+        val editarBt: Button = itemView.findViewById(R.id.editar_bt)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsuarioViewHolder {
@@ -43,6 +46,11 @@ class UsuarioAdapter(private val usuarios: List<UsuarioEntity>) :
         holder.categoriaTv.text = "Categoria IMC: ${usuario.categoriaImc}"
         holder.tmbTv.text = "TMB: %.2f kcal".format(usuario.tmb)
         holder.pesoIdealTv.text = "Peso Ideal: %.1f kg".format(usuario.pesoIdeal)
+
+
+        holder.editarBt.setOnClickListener {
+            onItemClick(usuario)
+        }
     }
 
     override fun getItemCount() = usuarios.size
