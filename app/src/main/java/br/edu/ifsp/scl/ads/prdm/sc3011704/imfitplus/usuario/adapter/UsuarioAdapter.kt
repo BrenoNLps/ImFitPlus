@@ -25,6 +25,11 @@ class UsuarioAdapter(private val usuarios: List<UsuarioEntity>, private val onIt
         val tmbTv: TextView = itemView.findViewById(R.id.tmbTv)
         val pesoIdealTv: TextView = itemView.findViewById(R.id.pesoIdealTv)
         val editarBt: Button = itemView.findViewById(R.id.editar_bt)
+
+        val fcmaxTv: TextView = itemView.findViewById(R.id.fcmaxTv)
+
+        val zonaTv: TextView = itemView.findViewById(R.id.zonaTv)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsuarioViewHolder {
@@ -46,6 +51,10 @@ class UsuarioAdapter(private val usuarios: List<UsuarioEntity>, private val onIt
         holder.categoriaTv.text = "Categoria IMC: ${usuario.categoriaImc}"
         holder.tmbTv.text = "TMB: %.2f kcal".format(usuario.tmb)
         holder.pesoIdealTv.text = "Peso Ideal: %.1f kg".format(usuario.pesoIdeal)
+        holder.fcmaxTv.text = "FCMAX: ${usuario.fcmax}"
+        holder.zonaTv.text = "Zona de treino: ${usuario.zonaTreino}"
+
+
 
 
         holder.editarBt.setOnClickListener {

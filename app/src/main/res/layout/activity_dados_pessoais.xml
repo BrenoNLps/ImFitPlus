@@ -1,145 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DadosPessoais"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:layout_height="match_parent">
+    <LinearLayout
 
-    <TextView
-        android:id="@+id/nome_tv"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/digite_seu_nome"
-        android:textSize="20sp"
-        />
+        android:layout_height="match_parent"
+        tools:context=".DadosPessoais"
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <EditText
-        android:id="@+id/nome_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/nome"
-        android:inputType="text"
-        android:textSize="20sp"
-        />
-
-
-    <TextView
-        android:id="@+id/idade_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/digite_sua_idade"
-        android:textSize="20sp"
-        />
-
-    <EditText
-        android:id="@+id/idade_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/idade"
-        android:inputType="number"
-        android:textSize="20sp"
-        />
-
-    <TextView
-        android:id="@+id/sexo_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/selecione_seu_sexo"
-        android:textSize="20sp"
-        />
-
-    <RadioGroup
-        android:id="@+id/sexo_rg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <RadioButton
-            android:id="@+id/masculino_rb"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/nome_tv"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/masculino"
-            android:layout_weight="1"
+            android:text="@string/digite_seu_nome"
             android:textSize="20sp"
             />
 
-        <RadioButton
-            android:id="@+id/feminino_rb"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/nome_et"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/feminino"
+            android:hint="@string/nome"
+            android:inputType="text"
             android:textSize="20sp"
             />
-    </RadioGroup>
 
 
-    <TextView
-        android:id="@+id/altura_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/coloque_sua_altura"
-        android:textSize="20sp"
-        />
-    <EditText
-        android:id="@+id/altura_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/altura"
-        android:inputType="numberDecimal"
-        android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/sexo_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/selecione_seu_sexo"
+            android:textSize="20sp"
+            />
 
-    <TextView
-        android:id="@+id/peso_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/coloque_seu_peso"
-        android:textSize="20sp"
-        />
+        <RadioGroup
+            android:id="@+id/sexo_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/masculino_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/masculino"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                />
 
-    <EditText
-        android:id="@+id/peso_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/peso"
-        android:inputType="numberDecimal"
-        android:textSize="20sp"/>
+            <RadioButton
+                android:id="@+id/feminino_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/feminino"
+                android:textSize="20sp"
+                />
+        </RadioGroup>
 
 
-    <TextView
-        android:id="@+id/nivel_atividade_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/nivel_de_atividade"
-        android:textSize="20sp"
-        />
+        <TextView
+            android:id="@+id/altura_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/coloque_sua_altura"
+            android:textSize="20sp"
+            />
+        <EditText
+            android:id="@+id/altura_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/altura"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"/>
 
-    <Spinner
-        android:id="@+id/nivel_atividade_sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/atividade"
-        android:textSize="20sp"
-        />
+        <TextView
+            android:id="@+id/peso_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/coloque_seu_peso"
+            android:textSize="20sp"
+            />
 
-    <Button
-        android:id="@+id/enviar_bt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enviar"
-        android:layout_marginTop="30sp"
-        android:textSize="30sp"
-        />
+        <EditText
+            android:id="@+id/peso_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/peso"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"/>
 
-    <Button
-        android:id="@+id/voltar_menu_bt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/voltar_para_o_menu"
-        android:layout_marginTop="10dp"
-        android:textSize="30sp" />
-</LinearLayout>
+
+        <TextView
+            android:id="@+id/nivel_atividade_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nivel_de_atividade"
+            android:textSize="20sp"
+            />
+
+        <Spinner
+            android:id="@+id/nivel_atividade_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/atividade"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/enviar_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:layout_marginTop="30sp"
+            android:textSize="30sp"
+            />
+
+        <Button
+            android:id="@+id/voltar_menu_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/voltar_para_o_menu"
+            android:layout_marginTop="10dp"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+
+</ScrollView>

@@ -8,6 +8,7 @@ import androidx.room.Update
 
 @Dao
 interface UsuarioDao {
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun setUsuario(usuario: UsuarioEntity)
 
@@ -21,12 +22,9 @@ interface UsuarioDao {
     suspend fun updateUsuario(usuario: UsuarioEntity)
 
 
-
-    /*
     @Query("SELECT * FROM usuario WHERE nome = :nome ORDER BY dataHora DESC")
     suspend fun getUsuariosByName(nome: String): List<UsuarioEntity>
 
     @Query("SELECT * FROM usuario WHERE nome = :nome")
     suspend fun getUsuarioByName(nome: String): UsuarioEntity?
-    */
 }

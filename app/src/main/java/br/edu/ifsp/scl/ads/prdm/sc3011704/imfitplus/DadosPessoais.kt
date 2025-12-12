@@ -9,6 +9,9 @@ import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityDadosPes
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.data.DatabaseBuilder
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.model.Usuario
 import kotlinx.coroutines.launch
+import java.time.LocalDate
+import java.util.Date
+import java.time.Period
 
 class DadosPessoais : AppCompatActivity() {
     //tela 2
@@ -29,7 +32,6 @@ class DadosPessoais : AppCompatActivity() {
                 val usuario = db.usuarioDao().getUsuarioById(usuarioId)
                 if (usuario != null) {
                     binding.nomeEt.setText(usuario.nome)
-                    binding.idadeEt.setText(usuario.idade.toString())
 
                     if (usuario.sexo == "masculino") {
                         binding.sexoRg.check(R.id.masculino_rb)
@@ -54,11 +56,19 @@ class DadosPessoais : AppCompatActivity() {
 
 
         binding.enviarBt.setOnClickListener {
+            fun calculateAge(birthDate: LocalDate): Int {
+                val currentDate = LocalDate.now()
+                return Period.between(birthDate, currentDate).years
+            }
+
+            val dataNascimento = calculateAge(LocalDate.of(1983, 1, 25))
+
+
             val nome   = binding.nomeEt.text.toString()
-            val idade  = binding.idadeEt.text.toString().toIntOrNull()
+            val idade  = dataNascimento
             val altura = validarAltura(binding.alturaEt.text.toString())
             val peso   = validarPeso(binding.pesoEt.text.toString())
-            if (nome.isBlank() || idade == null || altura == null || peso == null) {
+            if (nome.isBlank() || altura == null || peso == null) {
                 Toast.makeText(
                     this,
                     "Preencha todos os campos corretamente!",
@@ -75,6 +85,9 @@ class DadosPessoais : AppCompatActivity() {
             val imc = peso/ (altura*altura)
 
             val usuario = Usuario(
+                zonaTreino = "",
+                fcmax = 0,
+                nascimento = dataNascimento.toString(),
                 id = usuarioId,
                 nome = nome,
                 idade = idade,

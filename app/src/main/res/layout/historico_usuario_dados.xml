@@ -72,6 +72,20 @@
         android:layout_height="wrap_content"
         android:text="Peso Ideal:"/>
 
+    <TextView
+        android:id="@+id/fcmaxTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="fcmx"
+        />
+
+    <TextView
+        android:id="@+id/zonaTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="fcmx"
+        />
+
     <Button
         android:layout_marginTop="10dp"
         android:id="@+id/editar_bt"

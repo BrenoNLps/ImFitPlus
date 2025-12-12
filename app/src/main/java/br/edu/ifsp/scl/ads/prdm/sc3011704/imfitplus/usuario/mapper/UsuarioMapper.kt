@@ -5,6 +5,9 @@ import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.model.Usuario
 
 fun Usuario.toEntity(): UsuarioEntity {
     return UsuarioEntity(
+        zonaTreino = zonaTreino,
+        fcmax = fcmax,
+        nascimento = nascimento,
         id = this.id,
         nome = nome,
         idade = idade,
@@ -21,6 +24,9 @@ fun Usuario.toEntity(): UsuarioEntity {
 
 fun UsuarioEntity.toModel(): Usuario {
     return Usuario(
+        zonaTreino = zonaTreino,
+        fcmax = fcmax,
+        nascimento = nascimento,
         id = id,
         nome = nome,
         idade = idade,
