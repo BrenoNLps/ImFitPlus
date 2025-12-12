@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:padding="24dp"
+    android:background="@android:color/background_light"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,23 +15,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/apresentacao_tv"
-        android:textSize="24sp"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
         android:textAlignment="center"
-        />
+        android:paddingBottom="32dp"/>
+
     <Button
         android:id="@+id/apresentacao_bt"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/apresentacao_bt"
-        android:textSize="30sp"
-        android:layout_marginTop="20sp"/>
+        android:textSize="20sp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/historico_bt"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ver_hist_rico"
-        android:textSize="30sp"
-        android:layout_marginTop="20sp"/>
-
+        android:textSize="20sp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:textColor="@android:color/white"/>
 </LinearLayout>
