@@ -2,12 +2,14 @@ package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.data
 
 import androidx.room.Dao
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface UsuarioDao {
-    @Insert
-    suspend fun insert(usuario: UsuarioEntity)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun salvarUsuario(usuario: UsuarioEntity)
 
     @Query("SELECT * FROM usuario WHERE nome = :nome ORDER BY dataHora DESC")
     suspend fun historicoPorNomeUsuario(nome: String): List<UsuarioEntity>
@@ -20,5 +22,8 @@ interface UsuarioDao {
 
     @Query("SELECT * FROM usuario WHERE id = :id")
     suspend fun getUsuarioById(id: Int): UsuarioEntity?
+
+    @Update
+    suspend fun updateUsuario(usuario: UsuarioEntity)
 
 }

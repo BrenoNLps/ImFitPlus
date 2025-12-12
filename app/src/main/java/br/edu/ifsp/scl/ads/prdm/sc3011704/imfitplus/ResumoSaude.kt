@@ -45,7 +45,11 @@ Recomendação de água: %.2f L
         val usuarioEntity = usuario.toEntity()
 
         lifecycleScope.launch {
-            db.usuarioDao().insert(usuarioEntity)
+            if (usuarioEntity.id == 0) {
+                db.usuarioDao().salvarUsuario(usuarioEntity)
+            } else {
+                db.usuarioDao().updateUsuario(usuarioEntity)
+            }
         }
 
 
