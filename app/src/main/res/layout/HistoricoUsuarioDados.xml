@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#EEEEEE">
+
+    <!-- Dados pessoais -->
+    <TextView
+        android:id="@+id/nomeTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="Nome:"/>
+
+    <TextView
+        android:id="@+id/idadeTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Idade:"/>
+
+    <TextView
+        android:id="@+id/sexoTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sexo:"/>
+
+    <TextView
+        android:id="@+id/alturaTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Altura:"/>
+
+    <TextView
+        android:id="@+id/pesoTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Peso:"/>
+
+    <TextView
+        android:id="@+id/atividadeTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nível de atividade:"/>
+
+
+    <!-- Resultados dos cálculos -->
+    <TextView
+        android:id="@+id/imcTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IMC:"/>
+
+    <TextView
+        android:id="@+id/categoriaTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Categoria IMC:"/>
+
+    <TextView
+        android:id="@+id/tmbTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TMB:"/>
+
+    <TextView
+        android:id="@+id/pesoIdealTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Peso Ideal:"/>
+
+</LinearLayout>
