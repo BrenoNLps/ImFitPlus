@@ -15,6 +15,7 @@ interface UsuarioDao {
     @Query("SELECT * FROM usuario ORDER BY dataHora DESC")
     suspend fun historicoCompleto(): List<UsuarioEntity>
 
-
+    @Query("SELECT * FROM usuario WHERE nome = :nome")
+    suspend fun getUsuarioByNome(nome: String): UsuarioEntity?
 
 }
