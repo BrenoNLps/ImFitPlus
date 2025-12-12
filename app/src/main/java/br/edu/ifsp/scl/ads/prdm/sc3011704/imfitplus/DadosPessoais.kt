@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityDadosPessoaisBinding
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.UsuarioCompleto
 
 class DadosPessoais : AppCompatActivity() {
     //tela 2
@@ -38,14 +39,18 @@ class DadosPessoais : AppCompatActivity() {
             val atividade = binding.nivelAtividadeSp.selectedItem.toString()
             val imc = peso/ (altura*altura)
 
+            val usuario = UsuarioCompleto(
+                nome = nome,
+                idade = idade,
+                sexo = sexo,
+                altura = altura,
+                peso = peso,
+                atividade = atividade,
+                imc = imc
+            )
+
             val resultadoIMC = Intent(this, ResultadoIMC::class.java)
-            resultadoIMC.putExtra("nome"     ,nome)
-            resultadoIMC.putExtra("imc"      ,imc)
-            resultadoIMC.putExtra("sexo"     ,sexo)
-            resultadoIMC.putExtra("idade"    ,idade)
-            resultadoIMC.putExtra("peso"     ,peso)
-            resultadoIMC.putExtra("altura"   ,altura)
-            resultadoIMC.putExtra("atividade",atividade)
+            resultadoIMC.putExtra("usuario", usuario)
             startActivity(resultadoIMC)
         }
 

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityPesoIdealBinding
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.UsuarioCompleto
 
 class PesoIdeal : AppCompatActivity() {
     //tela 5
@@ -16,15 +17,10 @@ class PesoIdeal : AppCompatActivity() {
         binding = ActivityPesoIdealBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val imc = intent.getDoubleExtra("imc",0.0)
-        val categoria = intent.getStringExtra("categoria")
-        val gastoCalorico = intent.getStringExtra("gastoCalorico")
-        val nome = intent.getStringExtra("nome")
-        val peso = intent.getDoubleExtra("peso", 0.0)
-        val altura = intent.getDoubleExtra("altura", 0.0)
+        val usuario = intent.getParcelableExtra<UsuarioCompleto>("usuario")!!
 
-        val pesoIdeal = 22 * (altura * altura)
-        val diferenca = peso - pesoIdeal
+        val pesoIdeal = 22 * (usuario.altura * usuario.altura)
+        val diferenca = usuario.peso - pesoIdeal
 
         val pesoIdealFormatado = String.format("%.2f", pesoIdeal)
         val diferencaFormatada = String.format("%.2f", kotlin.math.abs(diferenca))
@@ -36,20 +32,13 @@ class PesoIdeal : AppCompatActivity() {
         }
 
         binding.resultadoTv.text =
-            " $nome,\n Seu peso atual é : ${String.format("%.2f", peso)} kg \n Seu peso ideal é : $pesoIdealFormatado kg \n $mensagem".trimIndent()
+            " ${usuario.nome},\n Seu peso atual é : ${String.format("%.2f", usuario.peso)} kg \n Seu peso ideal é : $pesoIdealFormatado kg \n $mensagem".trimIndent()
 
         binding.resumoSaudeBt.setOnClickListener{
-            val ResumoFinal = Intent(this, ResumoSaude::class.java)
-
-            ResumoFinal.putExtra("nome"     , nome)
-            ResumoFinal.putExtra("imc"      , imc)
-            ResumoFinal.putExtra("peso"     , peso)
-            ResumoFinal.putExtra("categoria"     , categoria)
-            ResumoFinal.putExtra("pesoIdeal"     , pesoIdealFormatado)//////////////////
-            ResumoFinal.putExtra("gastoCalorico"     , gastoCalorico)////////////////////////
-
-
-            startActivity(ResumoFinal)
+            val resumoFinal = Intent(this, ResumoSaude::class.java)
+            val usuarioAtualizado = usuario.copy(pesoIdeal = pesoIdeal)
+            resumoFinal.putExtra("usuario", usuarioAtualizado)
+            startActivity(resumoFinal)
 
         }
         binding.voltarBt.setOnClickListener {
