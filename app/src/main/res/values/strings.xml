@@ -16,6 +16,7 @@
     <string name="masculino">masculino</string>
     <string name="altura">Ex: 1.70</string>
     <string name="peso">Ex: 60.00</string>
+    <string name="ver_hist_rico">Ver histórico</string>
 
     <string-array name="atividade">
         <item>Sedentário</item>
