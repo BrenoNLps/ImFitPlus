@@ -3,10 +3,10 @@ package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.data.DatabaseBuilder
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.data.DatabaseBuilder
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityResumoSaudeBinding
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.mapper.toEntity
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.Usuario
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.mapper.toEntity
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.model.Usuario
 import kotlinx.coroutines.launch
 
 class ResumoSaude : AppCompatActivity() {

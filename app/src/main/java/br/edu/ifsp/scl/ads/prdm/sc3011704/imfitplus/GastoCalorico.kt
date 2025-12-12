@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityGastoCaloricoBinding
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.Usuario
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.model.Usuario
 
 class GastoCalorico : AppCompatActivity() {
     //tela 4

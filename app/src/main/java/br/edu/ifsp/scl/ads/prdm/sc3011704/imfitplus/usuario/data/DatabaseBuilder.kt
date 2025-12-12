@@ -1,4 +1,4 @@
-package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.data
+package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.data
 
 import android.content.Context
 import androidx.room.Room

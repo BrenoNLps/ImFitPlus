@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityDadosPessoaisBinding
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.Usuario
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.model.Usuario
 
 class DadosPessoais : AppCompatActivity() {
     //tela 2

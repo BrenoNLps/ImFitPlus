@@ -1,7 +1,7 @@
-package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.mapper
+package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.mapper
 
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.data.UsuarioEntity
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.Usuario
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.data.UsuarioEntity
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.usuario.model.Usuario
 
 fun Usuario.toEntity(): UsuarioEntity {
     return UsuarioEntity(
