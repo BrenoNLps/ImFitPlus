@@ -75,6 +75,7 @@ class DadosPessoais : AppCompatActivity() {
             val imc = peso/ (altura*altura)
 
             val usuario = Usuario(
+                id = usuarioId,
                 nome = nome,
                 idade = idade,
                 sexo = sexo,
