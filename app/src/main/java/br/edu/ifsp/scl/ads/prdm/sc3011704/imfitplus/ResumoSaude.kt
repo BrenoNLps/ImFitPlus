@@ -46,7 +46,7 @@ Recomendação de água: %.2f L
 
         lifecycleScope.launch {
             if (usuarioEntity.id == 0) {
-                db.usuarioDao().salvarUsuario(usuarioEntity)
+                db.usuarioDao().setUsuario(usuarioEntity)
             } else {
                 db.usuarioDao().updateUsuario(usuarioEntity)
             }

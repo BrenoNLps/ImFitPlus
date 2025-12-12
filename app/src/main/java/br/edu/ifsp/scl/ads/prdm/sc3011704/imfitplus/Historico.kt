@@ -21,8 +21,9 @@ class Historico : AppCompatActivity() {
         val db = DatabaseBuilder.getInstance(this)
 
         lifecycleScope.launch {
-            val listaUsuarios = db.usuarioDao().historicoCompleto()
+            val listaUsuarios = db.usuarioDao().getUsuarios()
             binding.historicoRv.layoutManager = LinearLayoutManager(this@Historico)
+
             binding.historicoRv.adapter = UsuarioAdapter(listaUsuarios) { usuarioSelecionado ->
                 val intent = Intent(this@Historico, DadosPessoais::class.java)
                 intent.putExtra("usuario_id", usuarioSelecionado.id)
