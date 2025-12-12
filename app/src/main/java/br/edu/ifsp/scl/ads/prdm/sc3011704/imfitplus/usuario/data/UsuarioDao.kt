@@ -18,4 +18,7 @@ interface UsuarioDao {
     @Query("SELECT * FROM usuario WHERE nome = :nome")
     suspend fun getUsuarioByNome(nome: String): UsuarioEntity?
 
+    @Query("SELECT * FROM usuario WHERE id = :id")
+    suspend fun getUsuarioById(id: Int): UsuarioEntity?
+
 }
