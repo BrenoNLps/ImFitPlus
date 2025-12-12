@@ -9,16 +9,16 @@ import androidx.core.view.WindowInsetsCompat
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityPesoIdealBinding
 
 class PesoIdeal : AppCompatActivity() {
-    //tela5
+    //tela 5
     private lateinit var binding: ActivityPesoIdealBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPesoIdealBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val imc = intent.getStringExtra("imc")
+        val imc = intent.getDoubleExtra("imc",0.0)
         val categoria = intent.getStringExtra("categoria")
-        val gastoCalorico = intent.getDoubleExtra("gastoCalorico", 0.0)
+        val gastoCalorico = intent.getStringExtra("gastoCalorico")
         val nome = intent.getStringExtra("nome")
         val peso = intent.getDoubleExtra("peso", 0.0)
         val altura = intent.getDoubleExtra("altura", 0.0)
@@ -43,10 +43,11 @@ class PesoIdeal : AppCompatActivity() {
 
             ResumoFinal.putExtra("nome"     , nome)
             ResumoFinal.putExtra("imc"      , imc)
+            ResumoFinal.putExtra("peso"     , peso)
             ResumoFinal.putExtra("categoria"     , categoria)
             ResumoFinal.putExtra("pesoIdeal"     , pesoIdealFormatado)//////////////////
             ResumoFinal.putExtra("gastoCalorico"     , gastoCalorico)////////////////////////
-            ResumoFinal.putExtra("peso"     , peso)
+
 
             startActivity(ResumoFinal)
 

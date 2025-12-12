@@ -8,6 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityResumoSaudeBinding
 
 class ResumoSaude : AppCompatActivity() {
+    //tela 6
     private lateinit var binding: ActivityResumoSaudeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,13 +28,17 @@ class ResumoSaude : AppCompatActivity() {
 
         val nome      = intent.getStringExtra("nome")
         val imc       = intent.getDoubleExtra("imc", 0.0)
-        val categoria = intent.getStringExtra("categoria")
         val peso      = intent.getDoubleExtra("peso", 0.0)
-        val pesoIdeal      = intent.getDoubleExtra("pesoIdeal", 0.0)
-        val gastoCalorico     = intent.getDoubleExtra("gastoCalorico", 0.0)
+        val categoria = intent.getStringExtra("categoria")
+        val pesoIdeal      = intent.getStringExtra("pesoIdeal")
+        val gastoCalorico  = intent.getStringExtra("gastoCalorico")
 
-        val recomendacaoAgua = (peso* 350)/1000
+        val recomendacaoAgua = (peso* 350)/10000
 
-        binding.resultadoFinalTv.text="Nome: $nome, \nimc: $imc, \ncategoria: $categoria, \npeso: $peso, \npeso Ideal: $pesoIdeal, \ngasto calorico: $gastoCalorico, \nRecomendacao de agua: $recomendacaoAgua Litros \n"
+        binding.resultadoFinalTv.text="Nome: $nome \nimc: $imc \ncategoria: $categoria \npeso: $peso \npeso Ideal: $pesoIdeal \ngasto calorico: $gastoCalorico \nRecomendacao de agua: $recomendacaoAgua Litros \n"
+
+        binding.voltarBt.setOnClickListener {
+            finish()
+        }
     }
 }

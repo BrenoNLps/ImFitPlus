@@ -24,6 +24,7 @@ Aplicativo Android simples que converte temperaturas entre **Celsius**, **Fahren
 
 ## ⚙️ Tecnologias usadas  
 
+
 - **Kotlin** — linguagem principal  
 - **Android Studio** — ambiente de desenvolvimento  
 - **Intents explícitas** — para navegação e passagem de dados  
