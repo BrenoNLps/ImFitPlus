@@ -18,7 +18,7 @@ class ResultadoIMC : AppCompatActivity() {
 
         val categoria = when{
             usuario.imc < 18.5 -> "Abaixo do peso"
-            usuario.imc < 25.0 -> "Normal"
+            usuario.imc < 25.0 -> "Peso normal"
             usuario.imc < 30.0 -> "Sobrepeso"
             else-> "Obesidade"
         }
