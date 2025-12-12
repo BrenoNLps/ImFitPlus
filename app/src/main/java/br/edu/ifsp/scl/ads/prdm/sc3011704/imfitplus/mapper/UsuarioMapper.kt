@@ -1,9 +1,9 @@
 package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.mapper
 
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.data.UsuarioEntity
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.UsuarioCompleto
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.Usuario
 
-fun UsuarioCompleto.toEntity(): UsuarioEntity {
+fun Usuario.toEntity(): UsuarioEntity {
     return UsuarioEntity(
         nome = nome,
         idade = idade,
@@ -18,8 +18,8 @@ fun UsuarioCompleto.toEntity(): UsuarioEntity {
     )
 }
 
-fun UsuarioEntity.toModel(): UsuarioCompleto {
-    return UsuarioCompleto(
+fun UsuarioEntity.toModel(): Usuario {
+    return Usuario(
         nome = nome,
         idade = idade,
         sexo = sexo,

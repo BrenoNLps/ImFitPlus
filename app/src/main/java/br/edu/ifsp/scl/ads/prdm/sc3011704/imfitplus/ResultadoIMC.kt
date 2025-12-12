@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityResultadoImcBinding
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.UsuarioCompleto
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.Usuario
 
 class ResultadoIMC : AppCompatActivity() {
     //tela 3
@@ -14,7 +14,7 @@ class ResultadoIMC : AppCompatActivity() {
         binding= ActivityResultadoImcBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val usuario = intent.getParcelableExtra<UsuarioCompleto>("usuario")!!
+        val usuario = intent.getParcelableExtra<Usuario>("usuario")!!
 
         val categoria = when{
             usuario.imc < 18.5 -> "Abaixo do peso"

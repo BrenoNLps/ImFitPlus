@@ -5,7 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 //feito para evitar a repetição de putExtra nas activities
 @Parcelize
-data class UsuarioCompleto(
+data class Usuario(
     val nome: String,
     val idade: Int,
     val sexo: String,

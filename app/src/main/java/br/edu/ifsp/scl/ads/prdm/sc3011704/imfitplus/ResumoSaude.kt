@@ -1,16 +1,12 @@
 package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.data.DatabaseBuilder
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.data.UsuarioEntity
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityResumoSaudeBinding
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.mapper.toEntity
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.UsuarioCompleto
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.Usuario
 import kotlinx.coroutines.launch
 
 class ResumoSaude : AppCompatActivity() {
@@ -21,7 +17,7 @@ class ResumoSaude : AppCompatActivity() {
         binding = ActivityResumoSaudeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val usuario = intent.getParcelableExtra<UsuarioCompleto>("usuario") ?: return
+        val usuario = intent.getParcelableExtra<Usuario>("usuario") ?: return
 
         // Calculo de agua : 350ml por quilograma(peso corporal),resultado em litros
         val recomendacaoAgua = (usuario.peso* 350)/10000

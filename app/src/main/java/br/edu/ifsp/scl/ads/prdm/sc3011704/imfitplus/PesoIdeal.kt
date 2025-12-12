@@ -2,12 +2,9 @@ package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityPesoIdealBinding
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.UsuarioCompleto
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.Usuario
 
 class PesoIdeal : AppCompatActivity() {
     //tela 5
@@ -17,7 +14,7 @@ class PesoIdeal : AppCompatActivity() {
         binding = ActivityPesoIdealBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val usuario = intent.getParcelableExtra<UsuarioCompleto>("usuario")!!
+        val usuario = intent.getParcelableExtra<Usuario>("usuario")!!
 
         val pesoIdeal = 22 * (usuario.altura * usuario.altura)
         val diferenca = usuario.peso - pesoIdeal

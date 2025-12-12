@@ -2,13 +2,9 @@ package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityGastoCaloricoBinding
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.databinding.ActivityMainBinding
-import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.UsuarioCompleto
+import br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus.model.Usuario
 
 class GastoCalorico : AppCompatActivity() {
     //tela 4
@@ -19,7 +15,7 @@ class GastoCalorico : AppCompatActivity() {
         binding= ActivityGastoCaloricoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val usuario = intent.getParcelableExtra<UsuarioCompleto>("usuario")!!
+        val usuario = intent.getParcelableExtra<Usuario>("usuario")!!
 
         val tmb = when (usuario.sexo?.lowercase()) {
             "masculino" -> 66  + (13.7 * usuario.peso) + (5 * usuario.altura * 100  ) - (6.8 * usuario.idade)
