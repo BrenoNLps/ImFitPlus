@@ -1,5 +1,6 @@
 package br.edu.ifsp.scl.ads.prdm.sc3011704.imfitplus
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -22,11 +23,17 @@ class Historico : AppCompatActivity() {
         lifecycleScope.launch {
             val listaUsuarios = db.usuarioDao().historicoCompleto()
             binding.historicoRv.layoutManager = LinearLayoutManager(this@Historico)
-            binding.historicoRv.adapter = UsuarioAdapter(listaUsuarios)
+            binding.historicoRv.adapter = UsuarioAdapter(listaUsuarios) { usuarioSelecionado ->
+                val intent = Intent(this@Historico, DadosPessoais::class.java)
+                intent.putExtra("usuario_id", usuarioSelecionado.id)
+                startActivity(intent)
+            }
+
         }
 
         binding.voltarBt.setOnClickListener {
             finish()
         }
+
     }
 }
