@@ -21,7 +21,21 @@ class ResumoSaude : AppCompatActivity() {
         // Calculo de agua : 350ml por quilograma(peso corporal),resultado em litros
         val recomendacaoAgua = (usuario.peso* 350)/10000
 
-        binding.resultadoFinalTv.text="Nome: ${usuario.nome} \nimc: ${usuario.imc} \ncategoria: ${usuario.categoriaImc} \npeso: ${usuario.peso} \npeso Ideal: ${usuario.pesoIdeal} \ngasto calorico: ${usuario.tmb} \nRecomendacao de agua: $recomendacaoAgua Litros \n"
+        binding.resultadoFinalTv.text = """
+Nome: ${usuario.nome}
+IMC: %.2f
+Categoria: ${usuario.categoriaImc}
+Peso: %.1f kg
+Peso Ideal: %.1f kg
+Gasto Calórico (TMB): %.2f kcal
+Recomendação de água: %.2f L
+""".format(
+            usuario.imc,
+            usuario.peso,
+            usuario.pesoIdeal,
+            usuario.tmb,
+            recomendacaoAgua
+        )
 
         binding.voltarBt.setOnClickListener {
             finish()
