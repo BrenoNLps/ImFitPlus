@@ -14,16 +14,19 @@ interface UsuarioDao {
     @Query("SELECT * FROM usuario ORDER BY dataHora DESC")
     suspend fun getUsuarios(): List<UsuarioEntity>
 
-    @Query("SELECT * FROM usuario WHERE nome = :nome")
-    suspend fun getUsuarioByNome(nome: String): UsuarioEntity?
-
     @Query("SELECT * FROM usuario WHERE id = :id")
     suspend fun getUsuarioById(id: Int): UsuarioEntity?
 
     @Update
     suspend fun updateUsuario(usuario: UsuarioEntity)
 
-    @Query("SELECT * FROM usuario WHERE nome = :nome ORDER BY dataHora DESC")
-    suspend fun getUsuarioByName(nome: String): List<UsuarioEntity>
 
+
+    /*
+    @Query("SELECT * FROM usuario WHERE nome = :nome ORDER BY dataHora DESC")
+    suspend fun getUsuariosByName(nome: String): List<UsuarioEntity>
+
+    @Query("SELECT * FROM usuario WHERE nome = :nome")
+    suspend fun getUsuarioByName(nome: String): UsuarioEntity?
+    */
 }
