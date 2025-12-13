@@ -88,7 +88,7 @@ class DadosPessoais : AppCompatActivity() {
                 zonaTreino = "",
                 fcmax = 0,
                 nascimento = dataNascimento.toString(),
-                id = usuarioId,
+                id = if (usuarioId == -1) 0 else usuarioId,
                 nome = nome,
                 idade = idade,
                 sexo = sexo,
