@@ -70,7 +70,7 @@ Batimentos máximos: $frequenciaCardiacaMaxima
 
         //salva no banco de dados
         val db = DatabaseBuilder.getInstance(this)
-        val usuarioEntity = usuario.toEntity()
+        val usuarioEntity = bancoAtualizado.toEntity()
 
         lifecycleScope.launch {
             db.usuarioDao().setUsuario(usuarioEntity)
